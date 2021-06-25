@@ -1,0 +1,20 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
+raw_file:
+  type: MemoryDataSet
+  
+ods_file:
+  type: MemoryDataSet
+
+dados_etl:
+  type: pandas.ParquetDataSet
+  save_args:
+    compression: 'snappy'
+  filepath: data/02_intermediate/amostra_final.parquet
+
+dados_particionados:
+ type: PartitionedDataSet
+ dataset: pandas.CSVDataSet
+ path: data/03_primary/etl_raizen
