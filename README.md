@@ -19,5 +19,7 @@ Construindo a imagem docker:
 `kedro docker run`
 
 #### Validando
-Utilize o comando `kedro docker jupyter lab` para iniciar um jupyter.
-O arquivo `notebooks/validacao.ipynb` carrega os dados resultantes para um dataframe onde o resultado pode ser validado.
+Utilize o comando `kedro docker jupyter lab` para iniciar um jupyter lab, acessando o notebook `notebooks/validacao.ipynb` os dados foram carregados para um dataframe onde o resultado pode ser validado.
+
+Utilize o comando para validar o dataflow resultante
+`kedro docker cmd --docker-args="-p=4141:4141" kedro viz --host=0.0.0.0`

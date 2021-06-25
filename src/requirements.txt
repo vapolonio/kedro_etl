@@ -369,3 +369,7 @@ widgetsnbextension==3.5.1
 # The following packages are considered to be unsafe in a requirements file:
 # pip
 # setuptools
+kedro-viz==3.12.1
+pandas==1.2.5
+wget==3.2
+pandas-ods-reader==0.0.7

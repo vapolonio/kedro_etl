@@ -16,7 +16,6 @@ def convert_xls_ods(data: MemoryDataSet) -> MemoryDataSet:
     print(output)
     return MemoryDataSet(data=[])
 def partition_by_date(df: pd.DataFrame) -> Dict[str, pd.DataFrame]:
-    from datetime import datetime
     parts = {}
     
     for year in df['year_month'].dt.year.unique():

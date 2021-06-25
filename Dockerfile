@@ -21,8 +21,7 @@ COPY . .
 RUN chown -R kedro:${KEDRO_GID} /home/kedro
 USER kedro
 RUN chmod -R a+w /home/kedro
-
-
+RUN pip install "kedro[pandas]"
 EXPOSE 8888 4141
 
 CMD ["kedro", "run"]

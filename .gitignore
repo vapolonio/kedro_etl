@@ -12,7 +12,9 @@ conf/**/*credentials*
 # ignore everything in the following folders
 data/**
 logs/**
-
+.local
+.jupyter 
+.ipython
 # except their sub-folders
 !data/**/
 !logs/**/
